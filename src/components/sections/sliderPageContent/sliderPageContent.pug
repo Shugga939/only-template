@@ -1,0 +1,7 @@
+mixin sliderPageContent(props)
+    .sliderPageContent&attributes(attributes)
+        .sliderPageContent__wrapper
+            h2.sliderPageContent__title Значение счетчика на активном слайде:
+            h1.sliderPageContent__counter
+            +customButton(title='Открыть').sliderPageContent__button
+        +sliderModal(dataJson.sliderImages.images)
