@@ -25,12 +25,12 @@ export default class Counter extends Component {
     }
 
     decrement = ()=> {
-        this.value = --this.value<0? 0 : this.value--
+        this.value = Math.max(0, --this.value)
         this.valueEl.textContent = `${this.value}`
     }
 
-
     destroy = () => {
-        // Destroy functions
+        this.incrementBtn.removeEventListener('click', this.increment)
+        this.decrementBtn.removeEventListener('click', this.decrement)
     }
 }

@@ -15,9 +15,8 @@ export default class SliderPageContent extends Component {
         this.counterEl = this.getElement('counter')!
         this.count = 0
         this.counterEl.textContent = `${this.count}`
-        this.openModalBtn = new CustomButton(getComponent('customButton', this.nRoot))
-        this.openModalBtn.addEL(this.openModal)
-        this.modal= new SliderModal(getComponent('sliderModal', this.nRoot),this.setCount)
+        this.openModalBtn = new CustomButton(getComponent('customButton', this.nRoot), this.openModal)
+        this.modal = new SliderModal(getComponent('sliderModal', this.nRoot),this.setCount)
     }
 
     openModal = ()=> {
@@ -29,8 +28,8 @@ export default class SliderPageContent extends Component {
         this.counterEl.textContent = `${this.count}`
     }
 
-
     destroy = () => {
-        // Destroy functions
+        this.openModalBtn.destroy()
+        this.modal.destroy()
     }
 }
