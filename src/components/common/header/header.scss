@@ -3,10 +3,64 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 60px;
+    width: 100%;
+    min-width: 375px;
 
-    svg {
-        fill: black;
-        width: 40px;
-        height: 18px;
+
+    &__logo {
+        width: 69px;
+        height: 24px;
+        margin-left: 40px;
+        z-index: 101;
+        
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &--mainColor {
+            svg {
+                fill: $black;
+            }
+        }
+
+        &--additionalColor {
+            svg {
+                fill: $white;
+            }
+        }
+
+        &--hide {
+            visibility: hidden;
+        }
+    }
+
+    &__links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        position: relative;
+        margin-right: 40px;
+        text-transform: uppercase;
+        
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &--active {
+            &::after {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 1px;
+                left: 0;
+                bottom: 0;
+                background-color: $black;
+            }
+        }
     }
 }

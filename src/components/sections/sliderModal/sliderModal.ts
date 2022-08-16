@@ -17,8 +17,7 @@ export default class SliderModal extends Component {
         super(element);
 
         this.parrentsCount = setCount
-        this.closeModalBtn = new CustomButton(getComponent('customButton',this.nRoot))
-        this.closeModalBtn.addEL(this.onClose)
+        this.closeModalBtn = new CustomButton(getComponent('customButton',this.nRoot),this.onClose)
         this.currentSlide = null
         this.counters = []
 
@@ -60,6 +59,7 @@ export default class SliderModal extends Component {
 
 
     destroy = () => {
-        // Destroy functions
+        this.closeModalBtn.destroy()
+        this.counters.forEach(count=> count.destroy())
     }
 }
