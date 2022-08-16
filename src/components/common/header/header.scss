@@ -21,13 +21,13 @@
 
         &--mainColor {
             svg {
-                fill: black;
+                fill: $black;
             }
         }
 
         &--additionalColor {
             svg {
-                fill: white;
+                fill: $white;
             }
         }
 
@@ -59,7 +59,7 @@
                 height: 1px;
                 left: 0;
                 bottom: 0;
-                background-color: black;
+                background-color: $black;
             }
         }
     }
