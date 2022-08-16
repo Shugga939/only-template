@@ -1,0 +1,23 @@
+.counter {
+    $root: &;
+    font-size: 20px;
+    display: flex;
+
+    &__button {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: $buttonColor;
+        color: $white;
+    }
+
+    &__value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        border: 1px solid $borderColor;
+        padding: 0 13px;
+        margin: 0 50px;
+    }
+}

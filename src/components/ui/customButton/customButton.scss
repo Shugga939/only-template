@@ -1,0 +1,13 @@
+.customButton {
+    $root: &;
+
+    &__button {
+        width: 152px;
+        height: 63px;
+        left: 886px;
+        top: 723px;
+        background: $buttonColor;
+        border-radius: 30px;
+        color: $white;
+    }
+}

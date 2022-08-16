@@ -1,0 +1,13 @@
+mixin sliderModal(props)
+    .sliderModal&attributes(attributes)
+        .sliderModal__wrapper
+            +customButton(title='Закрыть').sliderModal__close
+            .swiper
+                .swiper-wrapper
+                    each slide in props
+                        .swiper-slide
+                            +img(slide.img).swiper_image
+                            +counter
+            .swiper-button-prev
+            .swiper-button-next
+

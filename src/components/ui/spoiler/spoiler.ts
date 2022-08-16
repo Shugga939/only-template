@@ -10,10 +10,10 @@ export default class Spoiler extends Component {
         let currentItem = (e.target as HTMLElement).closest('.spoiler__head')
         
         if (currentItem) {
-            let title = currentItem.querySelector('.spoiler__title')
-            let spoiler  = currentItem.nextSibling as HTMLDivElement
-            let state_open = currentItem.querySelector('.spoiler__state--open')
-            let state_close = currentItem.querySelector('.spoiler__state--close')
+            const title = currentItem.querySelector('.spoiler__title')
+            const spoiler  = currentItem.nextSibling as HTMLDivElement
+            const state_open = currentItem.querySelector('.spoiler__state--open')
+            const state_close = currentItem.querySelector('.spoiler__state--close')
 
             if (spoiler!.classList.contains('.spoiler--active')) {
                 spoiler!.style.height = `${0}px`
